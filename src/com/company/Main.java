@@ -1,29 +1,23 @@
-package com.kerttu;
+package kool;
 
-public class Ring {
-    double raadius;
-    String varv;
+public class Main {
 
-    public Ring() {
-        this.raadius = 0.0;
-        this.varv = "värvitu";
-    }
+    public static void main(String[] args) {
+        Ring ring1 = new Ring();
+        Ring ring2 = new Ring(5);
+        Ring ring3 = new Ring(10, "punase");
 
-    public Ring(double raadius, String varv) {
-        this.raadius = raadius;
-        this.varv = varv;
-    }
+        System.out.println(ring1.toString());
+        System.out.println(ring2.toString());
+        System.out.println(ring3.toString());
 
-    public double ringjoonePikkus() {
-        return 2 * Math.PI * this.raadius;
+        System.out.println(ring1.varv + " ring1 ringjoone pikkus  = " + ring1.ringjoonePikkus());
+        System.out.println(ring2.varv + " ring2 ringjoone pikkus  = " + ring2.ringjoonePikkus());
+        System.out.println(ring3.varv + " ring3 ringjoone pikkus  = " + ring3.ringjoonePikkus());
 
-    }
-
-    @Override
-    public String toString() {
-        return "Ring{" +
-                "raasdius=" + raadius +
-                ", varv='" + varv + '\'' +
-                '}';
+        System.out.println(ring1.varv + " ring1 pindala  = " + ring1.ringiPindala());
+        System.out.println(ring2.varv + " ring2 pindala  = " + ring2.ringiPindala());
+        System.out.println(ring3.varv + " ring3 pindala  = " + ring3.ringiPindala()
+        );
     }
 }
